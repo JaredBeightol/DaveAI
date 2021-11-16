@@ -1,16 +1,22 @@
-# This is a sample Python script.
+# DAVE AI
+# This is a project and an attempt for me to create an AI
+# There isn't really an end goal, this is more an experiment
+# Started on 11/16/2021
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+# DECLARE VARIABLES HERE
+userInputs = []  # List to hold user inputs
+AIObservations = []  # List to hold all of DaveAI's knowledge
 
+# Prompts user
+print("Hello! Welcome to DaveAI. This AI is attempting to learn by observation, so go ahead! Feel free to interact.")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+# Interaction and processing loop
+while True:
+    userInput = input()  # Gets user input
+    userInputs.append(userInput)  # Adds user input to list of user inputs
+    AIObservations.append(userInput)  # AI Observes recent user input
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    # Just testing boiler plate code
+    print(len(userInputs))
+    print(userInputs.pop())
+    print(len(userInputs))
